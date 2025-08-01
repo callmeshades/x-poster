@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('consumer_key');
             $table->string('consumer_secret');
             $table->string('bearer_token');
+            $table->boolean('free_mode')->default(false);
             $table->timestamps();
         });
     }

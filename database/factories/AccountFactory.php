@@ -23,6 +23,7 @@ class AccountFactory extends Factory
             'consumer_key' => $this->faker->uuid(),
             'consumer_secret' => $this->faker->uuid(),
             'bearer_token' => $this->faker->uuid(),
+            'free_mode' => false
         ];
     }
 }

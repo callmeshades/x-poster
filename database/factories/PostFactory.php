@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,6 +18,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
+            'account_id' => Account::factory(),
             'text' => $this->faker->text(),
             'posted_at' => null
         ];

@@ -17,6 +17,7 @@ class AccountFactory extends Factory
     public function definition(): array
     {
         return [
+            'username' => $this->faker->userName(),
             'external_id' => 1,
             'access_token' => $this->faker->uuid(),
             'token_secret' => $this->faker->uuid(),

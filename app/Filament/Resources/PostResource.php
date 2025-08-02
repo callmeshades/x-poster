@@ -26,7 +26,12 @@ class PostResource extends Resource
                 Forms\Components\Textarea::make('text')
                     ->required(),
                 Forms\Components\DatePicker::make('posted_at')
-                    ->readOnly()
+                    ->readOnly(),
+                Forms\Components\Select::make('account_id')
+                    ->relationship('account', 'username')
+                    ->searchable()
+                    ->preload()
+                    ->required()
             ]);
     }
 

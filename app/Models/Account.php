@@ -12,12 +12,18 @@ class Account extends Model
     use HasFactory;
 
     protected $fillable = [
+        'username',
         'external_id',
         'access_token',
         'token_secret',
         'consumer_key',
         'consumer_secret',
         'bearer_token',
+        'free_mode'
+    ];
+
+    protected $casts = [
+        'free_mode' => 'boolean',
     ];
 
     public function posts(): HasMany
